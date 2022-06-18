@@ -51,7 +51,7 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C files, open `example/ios/AwesomeModuleExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-awesome-module`.
+To edit the Objective-C files, open `example/ios/AwesomeModuleExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-eartho-module`.
 
 To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativeawesomemodule` under `Android`.
 

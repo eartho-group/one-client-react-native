@@ -1,5 +1,5 @@
 {
-  "name": "react-native-awesome-module",
+  "name": "react-native-eartho-module",
   "version": "0.1.0",
   "description": "a",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-awesome-module.podspec",
+    "react-native-eartho-module.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/dvird/react-native-awesome-module",
+  "repository": "https://github.com/dvird/react-native-eartho-module",
   "author": "dvir <dvir.daniel@hotmail.com> (https://github.com/dvird)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dvird/react-native-awesome-module/issues"
+    "url": "https://github.com/dvird/react-native-eartho-module/issues"
   },
-  "homepage": "https://github.com/dvird/react-native-awesome-module#readme",
+  "homepage": "https://github.com/dvird/react-native-eartho-module#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.reactnativeawesomemodule"
+        applicationId "com.eartho.one_example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -184,7 +184,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
 
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+  implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
@@ -204,7 +204,7 @@ dependencies {
         implementation jscFlavor
     }
 
-    implementation project(':reactnativeawesomemodule')
+    implementation project(':eartho_one')
 }
 
 // Run this once to be able to run the application with BUCK
