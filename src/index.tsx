@@ -18,7 +18,7 @@ const EarthoOneModule = NativeModules.EarthoModule
   );
 
 export function init(clientId: string, clientSecret: string): Promise<void> {
-  return EarthoOneModule.init(clientId, clientSecret);
+  return EarthoOneModule.initEartho(clientId, clientSecret);
 }
 export function connectWithRedirect(accessId: string): Promise<string> {
   return EarthoOneModule.connectWithRedirect(accessId);

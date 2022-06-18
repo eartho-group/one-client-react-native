@@ -27,7 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for AwesomeModuleExample:
+          // Packages that cannot be autolinked yet can be added manually here, for EarthoModuleExample:
           // packages.add(new MyReactNativePackage());
           packages.add(new EarthoOneModulePackage());
           return packages;
@@ -63,7 +63,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.example.reactnativeawesomemodule.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.example.reactnativeEarthoModule.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
