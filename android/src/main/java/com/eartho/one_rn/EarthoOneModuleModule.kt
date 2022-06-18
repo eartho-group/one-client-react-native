@@ -20,7 +20,7 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun init(clientId: String, clientSecret: String, promise: Promise) {
+  fun initEartho(clientId: String, clientSecret: String, promise: Promise) {
     config = EarthoOneConfig(
       clientId,
       clientSecret

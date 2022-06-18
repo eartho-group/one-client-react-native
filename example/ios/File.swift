@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  AwesomeModuleExample
+//  EarthoModuleExample
 //
 
 import Foundation
