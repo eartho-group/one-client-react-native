@@ -25,17 +25,17 @@ export function connectWithRedirect(accessId: string): Promise<string> {
 }
 
 export function getIdToken(): Promise<string> {
-  return EarthoOneModule.getIdToken();
+  return EarthoOneModule.getIdToken('');
 }
 
 export function getUser(): Promise<EarthoUser> {
-  return EarthoOneModule.getUser().then(
+  return EarthoOneModule.getUser('').then(
     (userData: Map<string, any>) => userData as EarthoUser
   );
 }
 
 export function disconnect(): Promise<void> {
-  return EarthoOneModule.disconnect();
+  return EarthoOneModule.disconnect('');
 }
 export class EarthoUser {
   firstName?: string;

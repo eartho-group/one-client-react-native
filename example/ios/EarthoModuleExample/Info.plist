@@ -29,7 +29,7 @@
 			<string>eartho</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.eartho.one_example://one.eartho.world/ios/com.eartho.one_example.App/callback
+				<string>com.eartho.oneExample://one.eartho.world/ios/com.eartho.oneExample.App/callback
 </string>
 			</array>
 		</dict>
