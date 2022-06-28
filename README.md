@@ -24,7 +24,7 @@ You can easily keep your backend solution - self server / firebase / amplify , o
     <a href="https://discord.gg/5QbuTNTG2q">Discord</a>
   </p>
  <br />
-<img src="https://user-images.githubusercontent.com/99670283/175269660-d7925075-ed4e-4a56-853f-a4ef86cf90e8.png">
+<img src="https://user-images.githubusercontent.com/99670283/176105926-c9f0b25a-01de-45a1-97a6-2f93dbb4d81c.png">
 </div>
 
 
@@ -61,23 +61,28 @@ Here's why:
 <h3 align="center">Only 3 simple steps and you done</h3>
 <p align="center">
 
-Develop fast<br />
-Get users from all sources into your app fast!<br />
-One line of code to authenticate users via any social network. Eartho also supports web3 login via Metamask etc.<br />
-You dont need to read the docs of all companies and you dont need to open accounts there. <br />
-
+  Develop fast<br />
+  Get users from all sources into your app fast!<br />
+  One line of code to authenticate users via any social network. Eartho also supports web3 login via Metamask etc.<br />
+  You dont need to read the docs of all companies and you dont need to open accounts there. <br />
+  
 ```
   final options = { accessId: "0xd...07" };
-  final crendentials = earthoOne.connectWithRedirect(options);
+  final crendentials = earthoOne.connectWithRedirect(options);  
 ```
-
+  
 We manage our documents on our website as a single source of truth. Open our quick start guide to
 get started.
 
-<br />
-<h3>Full Docs Here<br />
-<a href="https://www.eartho.world/product/learn">
+<br /> 
+<h3>Full Docs Here<br /> 
+<a href="https://www.eartho.world/product/learn"> 
 https://www.eartho.world/product/learn
+</a></h3>
+<br /> <br />
+<h3>
+<a href="https://discord.gg/5QbuTNTG2q"> 
+Our Discord For Live Support
 </a></h3>
 </p>
 <br /> <br />
