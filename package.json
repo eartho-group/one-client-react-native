@@ -1,7 +1,7 @@
 {
   "name": "@eartho/one-client-react-native",
-  "version": "1.0.0",
-  "description": "Get users from all sources into your app fast! We are a third layer that abstracts the complexity for you and protects your users from being tracked.",
+  "version": "1.0.2",
+  "description": "Login and authentication from all sources with 1 line of code ! Login from Google, Twitter, Github, Facebook, Apple, Microsoft, Twitch and VK at once with not extra steps or extra effort.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -32,13 +32,27 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
+    "eartho",
+    "login",
     "react-native",
     "ios",
-    "android"
+    "android",
+    "authorization",
+    "authenticatoion",
+    "access",
+    "auth",
+    "pkce",
+    "ui",
+    "auth dialog",
+    "dialog",
+    "firebase auth",
+    "firebase",
+    "cognito",
+    "Eartho One"
   ],
   "repository": "https://github.com/eartho-group/one-client-react-native",
   "author": "dvir <dvir.daniel@hotmail.com> (https://github.com/dvird)",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/eartho-group/one-client-react-native/issues"
   },
