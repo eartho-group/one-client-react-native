@@ -2,7 +2,7 @@ import EarthoOne
 
 @objc(EarthoModule)
 class EarthoModule: NSObject {
-    let earthoOne = EarthoOne()
+    var earthoOne : EarthoOne?
 
     @objc(initEartho:withB:withResolver:withRejecter:)
     func initEartho(
@@ -10,8 +10,7 @@ class EarthoModule: NSObject {
         clientSecret: String, 
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
-        
-        resolve("")
+                    earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
     }
 
     @objc(connectWithRedirect:withResolver:withRejecter:)
@@ -19,7 +18,10 @@ class EarthoModule: NSObject {
         accessId: String, 
         resolve: @escaping RCTPromiseResolveBlock,
         reject:@escaping RCTPromiseRejectBlock) -> Void {
-                 let earthoOne = EarthoOne()
+         guard let earthoOne = earthoOne else {
+                           reject("ConnectFailure", "SDK is not initalized. please call init",nil)
+                return
+            }
             earthoOne.connectWithPopup(
             accessId: accessId,
             onSuccess: { credentials in
@@ -44,7 +46,10 @@ class EarthoModule: NSObject {
         a:String,
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
-    
+     guard let earthoOne = earthoOne else {
+                           reject("ConnectFailure", "SDK is not initalized. please call init",nil)
+                return
+            }
             resolve(earthoOne.getIdToken())
     }
 
@@ -53,7 +58,10 @@ class EarthoModule: NSObject {
         a:String,
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
-        
+         guard let earthoOne = earthoOne else {
+                           reject("ConnectFailure", "SDK is not initalized. please call init", nil)
+                return
+            }
             do {
                        let credentials = earthoOne.getUser();
                        guard credentials != nil else {
@@ -76,6 +84,10 @@ class EarthoModule: NSObject {
         a:String,
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
+             guard let earthoOne = earthoOne else {
+                           reject("ConnectFailure", "SDK is not initalized. please call init", nil)
+                return
+            }
         earthoOne.logout();
         resolve("")
     }
