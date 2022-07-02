@@ -51,7 +51,7 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun getUser(promise: Promise) {
+  fun getUser(a: String, promise: Promise) {
     try {
       val user = earthoOne.getUser() ?: return promise.resolve(null);
       val gson = Gson()
@@ -63,7 +63,7 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun getIdToken(promise: Promise) {
+  fun getIdToken(a: String,promise: Promise) {
     try {
       val token = earthoOne.getIdToken()
       promise.resolve(token)
@@ -73,7 +73,7 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun disconnect(promise: Promise) {
+  fun disconnect(a: String,promise: Promise) {
     try {
       val user = earthoOne.logout()
     } catch (e: Exception) {

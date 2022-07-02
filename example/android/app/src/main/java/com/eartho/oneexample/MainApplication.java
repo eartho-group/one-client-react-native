@@ -1,4 +1,4 @@
-package com.eartho.one_example;
+package com.eartho.oneexample;
 
 import android.app.Application;
 import android.content.Context;

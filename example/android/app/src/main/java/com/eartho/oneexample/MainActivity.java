@@ -1,4 +1,4 @@
-package com.eartho.one_example;
+package com.eartho.oneexample;
 
 import com.facebook.react.ReactActivity;
 

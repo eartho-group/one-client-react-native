@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Pressable } from 'react-native';
-import { init, connectWithRedirect, getIdToken, getUser } from 'react-native-eartho-module';
+import { init, connectWithRedirect, getIdToken, getUser } from '@eartho/one-client-react-native';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -21,6 +21,8 @@ export default function App() {
   return (
 
     <View style={styles.container}>
+            <Text style={{marginBottom:32}}>{"Details in logs output"}</Text>
+
       <Pressable style={styles.button} onPress={async () => {
         await connectWithRedirect("V1te8aEqOJNtPseu3VTe")
       }}>
@@ -36,6 +38,7 @@ export default function App() {
       }}>
         <Text style={styles.text}>{"getUser"}</Text>
       </Pressable>
+
     </View>
   );
 }
