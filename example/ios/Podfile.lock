@@ -1,7 +1,7 @@
 PODS:
   - boost (1.76.0)
   - DoubleConversion (1.1.6)
-  - EarthoOne (1.0.4):
+  - EarthoOne (1.0.5):
     - JWTDecode (~> 2.0)
     - SimpleKeychain
   - FBLazyVector (0.68.2)
@@ -222,8 +222,8 @@ PODS:
   - React-jsinspector (0.68.2)
   - React-logger (0.68.2):
     - glog
-  - react-native-eartho-module (1.0.4):
-    - EarthoOne (~> 1.0.4)
+  - react-native-eartho-module (1.0.6):
+    - EarthoOne (~> 1.0.5)
     - React-Core
   - React-perflogger (0.68.2)
   - React-RCTActionSheet (0.68.2):
@@ -405,7 +405,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
-  EarthoOne: aa1bca209887cab2a39e2945b31136ba51931b45
+  EarthoOne: 5990f7689d34a057ad7c2f208146ccb04a6b9680
   FBLazyVector: a7a655862f6b09625d11c772296b01cd5164b648
   FBReactNativeSpec: 81ce99032d5b586fddd6a38d450f8595f7e04be4
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
@@ -424,7 +424,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: b7b553412f2ec768fe6c8f27cd6bafdb9d8719e6
   React-jsinspector: c5989c77cb89ae6a69561095a61cce56a44ae8e8
   React-logger: a0833912d93b36b791b7a521672d8ee89107aff1
-  react-native-eartho-module: dfa98442169f9e612c37ff9bffe94d3f69d778ba
+  react-native-eartho-module: ee67bf019a3fb87fdcf968f60aa70ff6ad7abe4b
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
   React-RCTActionSheet: 547fe42fdb4b6089598d79f8e1d855d7c23e2162
   React-RCTAnimation: bc9440a1c37b06ae9ebbb532d244f607805c6034
