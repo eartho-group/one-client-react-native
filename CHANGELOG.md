@@ -15,3 +15,6 @@ Update README
 
 1.0.7
 Add Support
+
+1.0.8
+Bumping android and rn version
