@@ -1,6 +1,6 @@
 {
   "name": "@eartho/one-client-react-native",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Login and authentication from all sources with 1 line of code ! Login from Google, Twitter, Github, Facebook, Apple, Microsoft, Twitch and VK at once with not extra steps or extra effort.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
