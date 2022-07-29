@@ -26,8 +26,9 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
       clientSecret
     )
     // config.networkingClient = DefaultClient(enableLogging = true)
-   val activity = getCurrentActivity();
+    val activity = getCurrentActivity();
     earthoOne = EarthoOne(activity!!, config)
+    earthoOne.init()
     promise.resolve("")
   }
 
@@ -43,7 +44,6 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
         }, onFailure = { f ->
           promise.reject("AuthenticationException", f.message + f.cause?.message, f)
         })
-
     } catch (e: Exception) {
       e.printStackTrace()
       promise.reject("AuthenticationException", e.message, e)
@@ -63,17 +63,21 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun getIdToken(a: String,promise: Promise) {
+  fun getIdToken(a: String, promise: Promise) {
     try {
-      val token = earthoOne.getIdToken()
-      promise.resolve(token)
+      earthoOne.getIdToken(onSuccess = { c ->
+        promise.resolve(c.idToken)
+      },
+        onFailure = { e ->
+          promise.reject("CredentialsException", e.message, e)
+        })
     } catch (e: Exception) {
-      promise.reject("Exception", e.message, e)
+      promise.reject("CredentialsException", e.message, e)
     }
   }
 
   @ReactMethod
-  fun disconnect(a: String,promise: Promise) {
+  fun disconnect(a: String, promise: Promise) {
     try {
       val user = earthoOne.logout()
     } catch (e: Exception) {

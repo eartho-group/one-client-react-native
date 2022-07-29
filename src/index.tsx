@@ -20,6 +20,7 @@ const EarthoOneModule = NativeModules.EarthoModule
 export function init(clientId: string, clientSecret: string): Promise<void> {
   return EarthoOneModule.initEartho(clientId, clientSecret);
 }
+
 export function connectWithRedirect(accessId: string): Promise<string> {
   return EarthoOneModule.connectWithRedirect(accessId);
 }
@@ -37,6 +38,7 @@ export function getUser(): Promise<EarthoUser> {
 export function disconnect(): Promise<void> {
   return EarthoOneModule.disconnect('');
 }
+
 export class EarthoUser {
   firstName?: string;
   lastName?: string;
@@ -50,5 +52,6 @@ export class EarthoUser {
   locale?: string;
   phoneNumber?: string;
   updatedAt?: string;
+  providerSource?: string;
   [key: string]: any;
 }

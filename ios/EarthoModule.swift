@@ -10,7 +10,8 @@ class EarthoModule: NSObject {
         clientSecret: String, 
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
-                    earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
+        earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
+        earthoOne?.start()
     }
 
     @objc(connectWithRedirect:withResolver:withRejecter:)
@@ -19,64 +20,78 @@ class EarthoModule: NSObject {
         resolve: @escaping RCTPromiseResolveBlock,
         reject:@escaping RCTPromiseRejectBlock) -> Void {
          guard let earthoOne = earthoOne else {
-                           reject("ConnectFailure", "SDK is not initalized. please call init",nil)
-                return
+                reject("ConnectFailure", "SDK is not initalized. please call init",nil)
+            return
+        }
+        earthoOne.connectWithPopup(
+        accessId: accessId,
+        onSuccess: { credentials in
+            do {
+                let data = EarthoCredentials( tokenType: credentials.tokenType, expiresIn: credentials.expiresIn, refreshToken: credentials.refreshToken, idToken: credentials.idToken, scope: credentials.scope, recoveryCode: credentials.recoveryCode
+                )
+                let encoder = JSONEncoder()
+                let json = try encoder.encode(data)
+                let result = String(data: json, encoding: .utf8)!
+                resolve(result)
+            } catch {
+                reject("ConnectFailure", "Failure Connect With EarthoOne", nil)
             }
-            earthoOne.connectWithPopup(
-            accessId: accessId,
-            onSuccess: { credentials in
-                 do {
-                     let data = EarthoCredentials( tokenType: credentials.tokenType, expiresIn: credentials.expiresIn, refreshToken: credentials.refreshToken, idToken: credentials.idToken, scope: credentials.scope, recoveryCode: credentials.recoveryCode
-                     )
-                     let encoder = JSONEncoder()
-                     let json = try encoder.encode(data)
-                     let result = String(data: json, encoding: .utf8)!
-                     resolve(result)
-                 } catch {
-                     reject("ConnectFailure", "Failure Connect With EarthoOne", nil)
-                 }
-            },
-            onFailure: { WebAuthError in
-                reject("ConnectFailure", "Failure Connect With EarthoOne", WebAuthError)
-            })
+        },
+        onFailure: { WebAuthError in
+            reject("ConnectFailure", "Failure Connect With EarthoOne", WebAuthError)
+        })
     }
 
     @objc(getIdToken:withResolver:withRejecter:)
     func getIdToken(
         a:String,
-        resolve:RCTPromiseResolveBlock,
-        reject:RCTPromiseRejectBlock) -> Void {
-     guard let earthoOne = earthoOne else {
-                           reject("ConnectFailure", "SDK is not initalized. please call init",nil)
-                return
-            }
-            resolve(earthoOne.getIdToken())
+        resolve: @escaping RCTPromiseResolveBlock,
+        reject: @escaping RCTPromiseRejectBlock) -> Void {
+        guard let earthoOne = earthoOne else {
+            reject("CredentialsFailure", "SDK is not initalized. please call init",nil)
+            return
+        }
+        earthoOne.getIdToken(onSuccess: { credentials in
+            resolve(credentials.idToken)
+        },
+        onFailure: { WebAuthError in
+            reject("CredentialsFailure", "Failure getIdToken", WebAuthError)
+        })
     }
 
     @objc(getUser:withResolver:withRejecter:)
     func getUser(
         a:String,
-        resolve:RCTPromiseResolveBlock,
-        reject:RCTPromiseRejectBlock) -> Void {
-         guard let earthoOne = earthoOne else {
-                           reject("ConnectFailure", "SDK is not initalized. please call init", nil)
+        resolve: RCTPromiseResolveBlock,
+        reject: RCTPromiseRejectBlock) -> Void {
+        guard let earthoOne = earthoOne else {
+            reject("ConnectFailure", "SDK is not initalized. please call init", nil)
+            return
+        }
+        do {
+            let credentials = earthoOne.getUser();
+            guard credentials != nil else {
+                resolve(nil)
                 return
             }
-            do {
-                       let credentials = earthoOne.getUser();
-                       guard credentials != nil else {
-                           resolve(nil)
-                           return
-                       }
 
-                       let dataa = UserResult(uid: credentials?.uid as! String, displayName: credentials?.displayName as? String, email: credentials?.email as? String, photoURL: credentials?.photoURL as? String, firstName: credentials?.firstName as? String, lastName: "", phone: "")
-                       let encoder = JSONEncoder()
-                       let json = try encoder.encode(dataa)
-                       let result = String(data: json, encoding: .utf8)!
-                resolve(result)
-                   } catch {
-                       reject("GetUserFailure", "Failure Get User Data", error)
-                   }
+            let dataa = UserResult(
+                uid: credentials?.uid as? String, 
+                displayName: credentials?.displayName as? String, 
+                email: credentials?.email as? String, 
+                photoURL: credentials?.photoURL as? String, 
+                firstName: credentials?.firstName as? String, 
+                lastName: credentials?.lastName as? String, 
+                phone: credentials?.phone as? String, 
+                providerSource: credentials?.providerSource as? String)
+
+            let encoder = JSONEncoder()
+            let json = try encoder.encode(dataa)
+            let result = String(data: json, encoding: .utf8)!
+            resolve(result)
+            } catch {
+            reject("GetUserFailure", "Failure Get User Data", error)
+        }
     }
 
     @objc(disconnect:withResolver:withRejecter:)
@@ -109,5 +124,6 @@ class EarthoModule: NSObject {
            var firstName: String?
            var lastName: String?
            var phone: String?
+           var providerSource: String?
        }
 }
