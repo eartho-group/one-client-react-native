@@ -9,16 +9,20 @@ const LINKING_ERROR =
 const EarthoOneModule = NativeModules.EarthoModule
   ? NativeModules.EarthoModule
   : new Proxy(
-    {},
-    {
-      get() {
-        throw new Error(LINKING_ERROR);
-      },
-    }
-  );
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
 
-export function init(clientId: string, clientSecret: string): Promise<void> {
-  return EarthoOneModule.initEartho(clientId, clientSecret);
+export function init(
+  clientId: string,
+  clientSecret: string,
+  enabledProviders?: string[]
+): Promise<void> {
+  return EarthoOneModule.initEartho(clientId, clientSecret, enabledProviders);
 }
 
 export function connectWithRedirect(accessId: string): Promise<string> {
@@ -54,4 +58,22 @@ export class EarthoUser {
   updatedAt?: string;
   providerSource?: string;
   [key: string]: any;
+}
+
+export class EarthoAuthProvider {
+  static facebook = 'facebook';
+  static google = 'google';
+  static twitter = 'twitter';
+
+  static apple = 'apple';
+  static github = 'github';
+  static microsoft = 'microsoft';
+
+  static vk = 'vk';
+  static phone = 'phone';
+  static metamask = 'metamask';
+
+  static reddit = 'reddit';
+  static snapchat = 'snapchat';
+  static yandex = 'yandex';
 }

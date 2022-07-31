@@ -4,6 +4,7 @@
 
 RCT_EXTERN_METHOD(initEartho:(NSString)clientId 
                  withB:(NSString)clientSecret
+                 withC:(NSArray)enabledProviders
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 

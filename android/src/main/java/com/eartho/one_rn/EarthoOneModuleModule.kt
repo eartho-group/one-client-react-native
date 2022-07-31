@@ -4,6 +4,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.ReadableArray
+
 import com.eartho.one.EarthoOne
 import com.eartho.one.EarthoOneConfig
 import com.eartho.one.request.DefaultClient
@@ -20,10 +22,11 @@ class EarthoOneModuleModule(val reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun initEartho(clientId: String, clientSecret: String, promise: Promise) {
+  fun initEartho(clientId: String, clientSecret: String, enabledProviders: ReadableArray?, promise: Promise) {
     config = EarthoOneConfig(
-      clientId,
-      clientSecret
+      clientId = clientId,
+      clientSecret = clientSecret,
+      enabledProviders = enabledProviders?.toArrayList()?.map{ it as String }?.toTypedArray()
     )
     // config.networkingClient = DefaultClient(enableLogging = true)
     val activity = getCurrentActivity();

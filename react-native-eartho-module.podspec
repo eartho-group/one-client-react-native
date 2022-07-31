@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency 'EarthoOne', '~> 1.0.7'
+  s.dependency 'EarthoOne', '~> 1.0.8'
 
 end

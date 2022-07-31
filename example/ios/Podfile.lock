@@ -1,7 +1,7 @@
 PODS:
   - boost (1.76.0)
   - DoubleConversion (1.1.6)
-  - EarthoOne (1.0.7):
+  - EarthoOne (1.0.8):
     - JWTDecode (~> 2.0)
     - SimpleKeychain (~> 0.12)
   - FBLazyVector (0.69.1)
@@ -209,6 +209,11 @@ PODS:
     - glog
     - RCT-Folly (= 2021.06.28.00-v2)
     - React-jsi/Default (= 0.69.1)
+  - React-jsi/Default (0.69.1):
+    - boost (= 1.76.0)
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2021.06.28.00-v2)
   - React-jsiexecutor (0.69.1):
     - DoubleConversion
     - glog
@@ -219,8 +224,8 @@ PODS:
   - React-jsinspector (0.69.1)
   - React-logger (0.69.1):
     - glog
-  - react-native-eartho-module (1.0.8):
-    - EarthoOne (~> 1.0.7)
+  - react-native-eartho-module (1.0.9):
+    - EarthoOne (~> 1.0.8)
     - React-Core
   - React-perflogger (0.69.1)
   - React-RCTActionSheet (0.69.1):
@@ -406,7 +411,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
-  EarthoOne: b800f667ac4edc6ff006b2e89724fa46e23ee370
+  EarthoOne: c32f3ac4a37cc6fbb37bf4cfb8f81368476ca383
   FBLazyVector: 068141206af867f72854753423d0117c4bf53419
   FBReactNativeSpec: 546a637adc797fa436dd51d1c63c580f820de31c
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
@@ -426,7 +431,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 758e70947c232828a66b5ddc42d02b4d010fa26e
   React-jsinspector: 55605caf04e02f9b0e05842b786f1c12dde08f4b
   React-logger: ca970551cb7eea2fd814d0d5f6fc1a471eb53b76
-  react-native-eartho-module: 45786c73764e89c5a23eb84d6be99a6d09f3e176
+  react-native-eartho-module: aaa7152bef52ccfefa80f0dc8212693411119a0e
   React-perflogger: c9161ff0f1c769993cd11d2751e4331ff4ceb7cd
   React-RCTActionSheet: 2d885b0bea76a5254ef852939273edd8de116180
   React-RCTAnimation: 353fa4fc3c19060068832dd32e555182ec07be45
@@ -442,6 +447,6 @@ SPEC CHECKSUMS:
   SimpleKeychain: 8193a9e40967eccac933c1fde82de46c07a5ae26
   Yoga: 7ab6e3ee4ce47d7b789d1cb520163833e515f452
 
-PODFILE CHECKSUM: eff90f73124339ca5360647e167b09924d91a7ed
+PODFILE CHECKSUM: 483d4510c536e08ce67e4bebedad2328ba688f1d
 
 COCOAPODS: 1.11.3

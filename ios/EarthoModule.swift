@@ -4,13 +4,14 @@ import EarthoOne
 class EarthoModule: NSObject {
     var earthoOne : EarthoOne?
 
-    @objc(initEartho:withB:withResolver:withRejecter:)
+    @objc(initEartho:withB:withC:withResolver:withRejecter:)
     func initEartho(
         clientId: String, 
-        clientSecret: String, 
+        clientSecret: String,
+        enabledProviders: NSArray?, 
         resolve:RCTPromiseResolveBlock,
         reject:RCTPromiseRejectBlock) -> Void {
-        earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
+        earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret, enabledProviders: (enabledProviders as? [String]))
         earthoOne?.start()
     }
 
