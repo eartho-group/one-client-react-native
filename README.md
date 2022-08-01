@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 <div id="top"></div>
 <br />
 <div align="center">
@@ -8,7 +18,7 @@
   <h1 align="center">Eartho. One</h1>
 
   <p align="center">
-    One line of code to authenticate users via<br /><b>Any social network, wallets and phone authentication</b><br /><br />
+    One line of code to authenticate users via<br /><b>Any social network, crypto wallet and phone authentication</b><br /><br />
 You don't need to read the documents of all companies and you don't need to open accounts there.<br />
 We are a third layer that abstracts the complexity for you and protects your users from being tracked.<br /><br />
 You can easily keep your backend solution - self server / firebase / amplify , or get a nocode solution from us.<br /><br />
@@ -44,13 +54,15 @@ From improving customer experience through seamless sign-on to making auth as ea
 Here's why:
 
 * Ready high converting UI/UX
-* Login from Google, Twitter, Github, Facebook, Apple, Microsoft at once with not extra steps or
+* Login from Google, Twitter, Github, Facebook, Apple, Microsoft, VK, Snapchat, Yandex, Reddit, SMS, Metamask at once with not extra steps or
   extra effort.
 * Your users will be protected under our third layer, we prevent from companies to track after your
   users.
+* Set boundaries and rules to stop users you don't want from connecting.
 * Advanced analytics and info about your app from all sources. ready for use. no extra steps
 * No-Code / Your own server. you decide. We support all, your own server, our server, firebase auth
   and many more.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
