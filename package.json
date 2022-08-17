@@ -52,7 +52,7 @@
   ],
   "repository": "https://github.com/eartho-group/one-client-react-native",
   "author": "dvir <dvir.daniel@hotmail.com> (https://github.com/dvird)",
-  "license": "MPL-2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/eartho-group/one-client-react-native/issues"
   },
