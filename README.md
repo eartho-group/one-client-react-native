@@ -1,37 +1,30 @@
 
-
-
-
-
-
-
-
-
-
 <div id="top"></div>
 <br />
 <div align="center">
-  <a href="https://eartho.world">
-    <img src="https://user-images.githubusercontent.com/99670283/172473537-5b4005cf-979b-45cf-bc8a-0f74fb6842e5.png" alt="Logo" width="128" height="128">
+  <a href="https://eartho.io">
+    <img src="https://github.com/eartho-group/media/blob/main/icon.png" alt="Logo" width="128" height="128">
   </a>
 
-  <h1 align="center">Eartho. One</h1>
+  <h1 align="center">Eartho.</h1>
 
   <p align="center">
-    One line of code to authenticate users via<br /><b>Any social network, crypto wallet and phone authentication</b><br /><br />
-You don't need to read the documents of all companies and you don't need to open accounts there.<br />
-We are a third layer that abstracts the complexity for you and protects your users from being tracked.<br /><br />
-You can easily keep your backend solution - self server / firebase / amplify , or get a nocode solution from us.<br /><br />
-    <a href="https://www.eartho.world/product/learn"><strong>Quick Start »</strong></a>
-    <br />
-    <br />
-    <a href="https://eartho.world">Our Website</a>
-    ·
-    <a href="https://github.com/eartho-group/one-client-react-native/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/eartho-group/one-client-react-native/issues">Request Feature</a>
-    ·
-    <a href="https://discord.gg/5QbuTNTG2q">Discord</a>
+    One line of code to authenticate and charge users via<br /><b>Any social network, crypto wallet, phone authentication, and payment processor</b><br /><br />
+
+Eartho introduces the first free shared access infrastructure for developers.<br />
+Free user management for all platforms:  authentication, verification & payments.<br />
+Start building in minutes with just one line of code, no complex integrations are needed.<br />
+
+<a href="https://www.eartho.io"><strong>Quick Start »</strong></a>
+<br />
+<br />
+<a href="https://eartho.io">Our Website</a>
+·
+<a href="https://github.com/eartho-group/one-client-js/issues">Report Bug</a>
+·
+<a href="https://github.com/eartho-group/one-client-js/issues">Request Feature</a>
+·
+<a href="https://discord.gg/5QbuTNTG2q">Discord</a>
   </p>
  <br />
 <img src="https://user-images.githubusercontent.com/99670283/177643618-21ef51cd-3ed1-4ed0-a75e-f5cb948a8f13.png">
@@ -121,10 +114,22 @@ Eartho<br />
 
 
 Discord - [Link](https://discord.gg/5QbuTNTG2q)<br />
-Twitter - [@eartho_world](https://twitter.com/eartho_world)<br />
+Twitter - [@eartho_io](https://twitter.com/eartho_io)<br />
 
 Project Link: [https://github.com/eartho-group/](https://github.com/eartho-group/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Copyrights
+
+Portions of this code are derived from projects licensed with MIT(Check the project's LICENSE file to see the full license).
+Here are the copyrights and the license type:
+
+- MIT License, Copyright (c) 2020 Auth0, Inc.
+- MIT License, Copyright (c) 2020-present Cryptr
+- MIT License, Copyright (c) 2020 Jose
+- MIT License, Copyright (c) 2016 Filip Skokan
+- MIT License, Copyright (c) 2020 Ville de Montréal
 
 
